@@ -1,5 +1,4 @@
-﻿using System.Web;
-using System.Web.Optimization;
+﻿using System.Web.Optimization;
 
 namespace QuyLe.Web.Editor
 {
@@ -25,6 +24,22 @@ namespace QuyLe.Web.Editor
             bundles.Add(new StyleBundle("~/Content/css").Include(
                       "~/Content/bootstrap.css",
                       "~/Content/site.css"));
+
+            // Admira templates
+            bundles.Add(new StyleBundle("~/Admiria/css").Include(
+                "~/Admiria/assets/css/bootstrap.min.css",
+                "~/Admiria/assets/css/icons.css",
+                "~/Admiria/assets/css/style.css"));
+
+            bundles.Add(new ScriptBundle("~/Admiria/js").Include(
+                "~/Admiria/assets/js/jquery.min.js",
+                "~/Admiria/assets/js/bootstrap.bundle.min.js",
+                "~/Admiria/assets/js/modernizr.min.js",
+                "~/Admiria/assets/js/waves.js",
+                "~/Admiria/assets/js/jquery.slimscroll.js",
+                "~/Admiria/assets/js/jquery.nicescroll.js",
+                "~/Admiria/assets/js/jquery.scrollTo.min.js",
+                "~/Admiria/assets/js/app.js"));
         }
     }
 }
